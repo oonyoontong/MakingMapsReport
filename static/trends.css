@@ -1,0 +1,19 @@
+.headers{
+	margin-top:10px;
+}
+
+.txtbox{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+.imgcontainer{
+	margin-bottom: 30px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
