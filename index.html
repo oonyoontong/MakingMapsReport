@@ -8,11 +8,11 @@
     <title>❤ WLP ❤</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="icon" href="">
     <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
         .w3-bar,h1 {font-family: "Montserrat", sans-serif}
         .navbar {
             overflow: hidden;
@@ -96,6 +96,13 @@
             text-decoration: none;
         }
 
+        .flex-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -105,7 +112,7 @@
     <a class="tablinks" onclick="openCity(event, 'Data')">Data</a>
     <a class="tablinks" onclick="openCity(event, 'Analysis')">Analysis</a>
     <div class="dropdown tablinks">
-        <button class="dropbtn" onclick="myFunction()">Trends
+        <button class="dropbtn" onclick="myFunction()">Trends &nbsp;
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
@@ -164,8 +171,22 @@
 </div>
 
 <div id="AboutUs" class="tabcontent">
-    <h2>LINWEI SO HANDSOME</h2>
-    <p>Analysis is the capital of Japan.</p>
+    <div class = "flex-container" style="padding: 40px 20px 20px 20px ">
+        <div class = "flex-container" style="flex-direction: column;">
+            <img src = "img/oontong.png" alt = "oontong-headshot" width =150 height=150/>
+            <h3>Oon Tong Tan</h3>
+        </div>
+
+        <div class = "flex-container" style="flex-direction: column;" >
+            <img src = "img/justinian-headshot.jpg" alt = "oontong-headshot" width =150 height=150/>
+            <h3>Justinian Siah</h3>
+        </div>
+
+        <div class = "flex-container" style="flex-direction: column;">
+            <p>asdasd</p>
+            <p>asdasd</p>
+        </div>
+    </div>
 </div>
 
 <script>
