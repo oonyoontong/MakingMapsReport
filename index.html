@@ -131,27 +131,81 @@
             margin-bottom: 5px;
         }
 
+        .backpanel{
+            position: fixed;
+            top: 53.6px;
+            left: 0;
+            padding-bottom: 100%;
+            padding-right: 20%;
+            width: 20px;
+        }
+
+        .backpanel:hover{
+            background-color: grey;
+
+        }
+        .backpanel:hover .back{
+            display: block;
+
+        }
+
+        .back{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left:8%;
+            color: white;
+            font-size:20px;
+        }
+
+        .nextpanel{
+            position: fixed;
+            top: 53.6px;
+            right: 0;
+            padding-bottom: 100%;
+            padding-right: 20%;
+            width: 20px;
+        }
+
+        .nextpanel:hover{
+            background-color: grey;
+
+        }
+
+        .nextpanel:hover .next{
+            display: block;
+        }
+
+        .next{
+            display: none;
+            position: fixed;
+            top: 50%;
+            right:8%;
+            color: white;
+            font-size: 20px;
+        }
+
     </style>
 </head>
 <body>
 
 <div class="navbar">
-    <a class="tablinks" onclick="openCity(event, 'Introduction')" id="defaultOpen">Introduction</a>
-    <a class="tablinks" onclick="openCity(event, 'Data')">Data</a>
-    <a class="tablinks" onclick="openCity(event, 'Analysis')">Analysis</a>
+    <a class="tablinks" id = "Introduction btn" onclick="openCity(event, 'Introduction')" >Introduction</a>
+    <a class="tablinks" id = "Data btn" onclick="openCity(event, 'Data')">Data</a>
+    <a class="tablinks" id = "Analysis btn" onclick="openCity(event, 'Analysis')">Analysis</a>
     <div class="dropdown tablinks">
         <button class="dropbtn" onclick="myFunction()">Trends &nbsp;
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-            <a class="tablinks trend" onclick="openCity(event, 'ICB')">Icebucket Challenge</a>
-            <a class="tablinks trend" onclick="openCity(event, 'HarlemShake')">Harlem Shake</a>
-            <a class="tablinks trend" onclick="openCity(event, 'Dress')">The Dress</a>
-            <a class="tablinks trend" onclick="openCity(event, 'Gwiyomi')">Gwiyomi Song</a>
-            <a class="tablinks trend" onclick="openCity(event, 'AoT')">Attack on Titan</a>
+            <a class="tablinks trend" id = "Icebucket Challenge btn" onclick="openCity(event, 'Icebucket Challenge')">Icebucket Challenge</a>
+            <a class="tablinks trend" id = "Harlem Shake btn" onclick="openCity(event, 'Harlem Shake')">Harlem Shake</a>
+            <a class="tablinks trend" id = "The Dress btn" onclick="openCity(event, 'The Dress')">The Dress</a>
+            <a class="tablinks trend" id = "Gwiyomi Song btn" onclick="openCity(event, 'Gwiyomi Song')">Gwiyomi Song</a>
+            <a class="tablinks trend" id = "Attack on Titan btn" onclick="openCity(event, 'Attack on Titan')">Attack on Titan</a>
         </div>
     </div>
-    <a class="tablinks" onclick="openCity(event, 'AboutUs')">About Us</a>
+    <a class="tablinks" id = "About Us btn" onclick="openCity(event, 'About Us')">About Us</a>
     <div class="navbar-header">
         <p class="navbar-brand"><i class="fa fa-heart"></i> &nbsp;We Love Poorthuis  &nbsp;<i class="fa fa-heart"></i></p>
     </div>
@@ -159,16 +213,21 @@
 
 
 <div id="Introduction" class="tabcontent">
+    <div class="nextpanel" onclick="openCity(event, 'Data')"> <a class="next">Next</a></div>
     <h2>Introduction</h2>
     <p>Introduction stuff</p>
 </div>
 
 <div id="Data" class="tabcontent">
+    <div class="backpanel" onclick="openCity(event, 'Introduction')"> <a class="back">Back</a></div>
+    <div class="nextpanel" onclick="openCity(event, 'Analysis')"> <a class="next">Next</a></div>
     <h2>Data</h2>
     <p>Data is the capital of France.</p>
 </div>
 
 <div id="Analysis" class="tabcontent">
+    <div class="backpanel" onclick="openCity(event, 'Data')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
     <h2>Analysis</h2>
         <h3>|Categories and Comparison</h3>
             <p>From the data as well as the carto graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
@@ -187,7 +246,10 @@
 
 <!-- Trends -->
 <!-- Trend 01: Ice Bucket Challenge -->
-<div id="ICB" class="tabcontent">
+<div id="Icebucket Challenge" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Analysis')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="next">Next</a></div>
+
     <div class="headers">
         <h2>Ice Bucket Challenge <badge class = "west-badge">Western</badge></h2>
     </div>
@@ -216,7 +278,9 @@
 </div>
 
 <!-- Trend 02: Harlem Shake -->
-<div id="HarlemShake" class="tabcontent">
+<div id="Harlem Shake" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'The Dress')"> <a class="next">Next</a></div>
     <div class="headers">
         <h2>Harlem Shake <badge class = "west-badge">Western</badge></h2>
     </div>
@@ -246,6 +310,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <!-- Trend 03: The Dress -->
 <div id="Dress" class="tabcontent">
     <div class="headers">
@@ -281,11 +346,30 @@
 
 <!-- Trend 05: Titans -->
 <div id="AoT" class="tabcontent">
+=======
+<div id="Gwiyomi Song" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'The Dress')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Attack on Titan')"> <a class="next">Next</a></div>
+    <h2>Gwiyomi <badge class = "west-badge">testing</badge></h2>
+    <p>Analysis is the capital of Japan.</p>
+</div>
+
+<div id="The Dress" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="next">Next</a></div>
+    <h2>Black&Blue / White&Gold Dress</h2>
+    <p>Analysis is the capital of Japan.</p>
+</div>
+
+<div id="Attack on Titan" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="back">Back</a></div>
+    <div class="nextpanel" onclick="openCity(event, 'About Us')"> <a class="next">Next</a></div>
+>>>>>>> 735dbe5192fd17b188d6844107b190c9788621e7
     <h2>Attack on Titan</h2>
     <p>Analysis is the capital of Japan.</p>
 </div>
 
-<div id="AboutUs" class="tabcontent">
+<div id="About Us" class="tabcontent">
     <div class = "flex-container" style="padding: 40px 20px 20px 20px ">
         <div class = "flex-container" style="flex-direction: column;">
             <img src = "img/oontong.png" alt = "oontong-headshot" width =150 height=150/>
@@ -336,7 +420,8 @@
 
         document.getElementById(cityName).style.display = "block";
 
-        evt.currentTarget.className += " active";
+        document.getElementById(cityName+ " btn").className += " active";
+        console.log(document.getElementById(cityName+ " btn").className);
 
         if (evt.currentTarget.className.includes("trend")){
             console.log("TESTING");
@@ -350,7 +435,7 @@
     }
 
     // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    document.getElementById("Introduction btn").click();
 </script>
 </body>
 </html>
