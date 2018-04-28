@@ -27,6 +27,11 @@
             text-decoration: none;
         }
 
+        .active{
+            background-color: #4f4f4f;
+        }
+
+
         .dropdown {
             float: left;
             overflow: hidden;
@@ -45,14 +50,14 @@
         }
 
         .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-            background-color: red;
+            background-color: #1f6377;
         }
 
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: #333;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
@@ -60,7 +65,7 @@
 
         .dropdown-content a {
             float: none;
-            color: black;
+            color: white;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -68,7 +73,7 @@
         }
 
         .dropdown-content a:hover {
-            background-color: #ddd;
+            background-color:  #1f6377;
         }
 
         .show {
@@ -88,6 +93,7 @@
             margin: 0 0 0 0;
             text-decoration: none;
         }
+
     </style>
 </head>
 <body>
@@ -96,21 +102,21 @@
     <a class="tablinks" onclick="openCity(event, 'Introduction')" id="defaultOpen">Introduction</a>
     <a class="tablinks" onclick="openCity(event, 'Data')">Data</a>
     <a class="tablinks" onclick="openCity(event, 'Analysis')">Analysis</a>
-    <div class="dropdown">
+    <div class="dropdown tablinks">
         <button class="dropbtn" onclick="myFunction()">Trends
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-            <a class="tablinks" onclick="openCity(event, 'ICB')">Icebucket Challenge</a>
-            <a class="tablinks" onclick="openCity(event, 'HarlemShake')">Harlem Shake</a>
-            <a class="tablinks" onclick="openCity(event, 'Dress')">The Dress</a>
-            <a class="tablinks" onclick="openCity(event, 'Gwiyomi')">Gwiyomi Song</a>
-            <a class="tablinks" onclick="openCity(event, 'AoT')">Attack on Titan</a>
+            <a class="tablinks trend" onclick="openCity(event, 'ICB')">Icebucket Challenge</a>
+            <a class="tablinks trend" onclick="openCity(event, 'HarlemShake')">Harlem Shake</a>
+            <a class="tablinks trend" onclick="openCity(event, 'Dress')">The Dress</a>
+            <a class="tablinks trend" onclick="openCity(event, 'Gwiyomi')">Gwiyomi Song</a>
+            <a class="tablinks trend" onclick="openCity(event, 'AoT')">Attack on Titan</a>
         </div>
     </div>
     <a class="tablinks" onclick="openCity(event, 'AboutUs')">About Us</a>
     <div class="navbar-header">
-        <p class="navbar-brand">We Love Poorthuis</p>
+        <p class="navbar-brand"><i class="fa fa-heart"></i> &nbsp; We Love Poorthuis  &nbsp;<i class="fa fa-heart"></i></p>
     </div>
 </div>
 
@@ -183,12 +189,26 @@
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
+
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
+
+
         document.getElementById(cityName).style.display = "block";
+
         evt.currentTarget.className += " active";
+
+        if (evt.currentTarget.className.includes("trend")){
+            console.log("TESTING");
+            dropdownTrend = document.getElementsByClassName("dropdown");
+            for (i = 0; i < dropdownTrend.length;i++){
+                dropdownTrend[i].className += " active";
+                console.log(dropdownTrend[i].className)
+
+            }
+        }
     }
 
     // Get the element with id="defaultOpen" and click on it
