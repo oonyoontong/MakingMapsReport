@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Making Maps I Project Report">
+    <meta name="author" content="OonTong,LinWei,Justinian">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>❤ WLP ❤</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -226,10 +229,24 @@
     <div class="backpanel" onclick="openCity(event, 'Data')"> <a class="back">Back</a></div>
     <div class="nextpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
     <h2>Analysis</h2>
-    <p>Analysis is the capital of Japan.</p>
+        <h3>|Categories and Comparison</h3>
+            <p>From the data as well as the carto graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
+            <ul>
+                <li>Recursive/Non-recursive</li>
+                <li>Growth Rate</li>
+                <li>Decay Rate</li>
+            </ul>
+            <h4><i>Recursive/Non-recursive</i></h4>
+            <img src="img/analysis1.png" class = "center">
+
+            <p>Above is the histograms of the number of tweets over time, it shows the number of tweets fluctuating periodically. A closer analysis revealed that the ‘ebbs and flow’ of tweets correspond to the weekly release of new Attack on Titan episodes. </p>
+
+
 </div>
 
-<div id="Icebucket Challenge" class="tabcontent">
+<!-- Trends -->
+<!-- Trend 01: Ice Bucket Challenge -->
+<div id="ICB" class="tabcontent">
     <div class="backpanel trend" onclick="openCity(event, 'Analysis')"> <a class="back">Back</a></div>
     <div class="nextpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="next">Next</a></div>
 
@@ -243,11 +260,13 @@
     </div>
 
     <div class="txtbox">
-        <iframe src="https://oonyoontong.carto.com/builder/25ac0632-ae5f-4143-b5c7-6a1d261deb80/" height="600" width="900"></iframe>
+        <iframe src="https://oonyoontong.carto.com/builder/25ac0632-ae5f-4143-b5c7-6a1d261deb80/" height="600" width="820"></iframe>
+        <br /><br />
     </div>
 
     <div class="txtbox">
-    <p>Active spreading of the “Ice Bucket Challenge” began in July 2014, when celebrities started doing the challenge and ‘nominating’ others to do so as well. <b>This means that this ‘western trend’ had spread globally within the span of 1 month.</b></p>
+    <p>Active spreading of the “Ice Bucket Challenge” began in July 2014, when celebrities started doing the challenge and ‘nominating’ others to do so as well. <b>This means that this ‘western trend’ had spread globally within the span of just 1 month!</b></p>
+    <p>We can see this in the time vs longitude graph below. On August 2014, the ALS Ice Bucket Challenge became a worldwide phenomenon, and continued to trend for the next few months. The ice bucket challenge is what we categorise as a "recurring trend", with the virality of the trend picking up every year during ALS Awareness Month.</p>
     </div>
 
     <div class="imgcontainer">
@@ -257,11 +276,37 @@
 
 </div>
 
-<div id="Harlem Shake" class="tabcontent">
+<!-- Trend 02: Harlem Shake -->
+<div id="HarlemShake" class="tabcontent">
     <div class="backpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="back">Back</a></div>
     <div class="nextpanel trend" onclick="openCity(event, 'The Dress')"> <a class="next">Next</a></div>
-    <h2>Harlem Shake</h2>
-    <p>Analysis is the capital of Japan.</p>
+    <div class="headers">
+        <h2>Harlem Shake <badge class = "west-badge">Western</badge></h2>
+    </div>
+
+    <div class="txtbox">
+        <img src="img/trends_2hs_02.jpg" alt="harlem shake pic" height="250" style="float:left; padding-bottom: 20px; padding-right: 20px;">
+        <p>The Harlem Shake is a viral trend in a form of a video utilizing a song of the same name. The video starts off with a single participant dancing with onlookers pretending to be ignorant of his presence, after 15s the beat is dropped and the video cuts to a group of participants flailing around to the beat of the song.</p>
+
+        <p>The trend started on 30th Jan 2013 when Youtube Star ‘DizastaMusic’ uploaded a video featuring the meme. This video started a viral trend of people uploading their own version of the "Harlem Shake" to YouTube. The name harlem shake actually comes from a hip-hop dance style which the song is referencing, though the ‘dance’ in the trend is wildly different.
+        </p>
+    </div>
+
+    <div class="txtbox" style="margin-top:30px;">
+        <h5><b>&nbsp;&nbsp;&nbsp;Spread of "Harlem Shake" over time</b></h5>
+        <iframe src="https://oonyoontong.carto.com/builder/332c4bbe-0635-4bcb-92c4-e05fa4299610/embed" height="600" width="820"></iframe>
+        <br /><br />
+    </div>
+
+    <div class="txtbox">
+    <p>This trend became global shortly after it was first released. <b>It took only 9 days (30th Jan - 8th Feb) or 0.23 Months for this ‘Western’ trend to spread globally.</b></p>
+    <p>In the time vs longitude graph below. We can see the spread of the trend from when it was uploaded up till it hit "global status" (the curve in each of the blocks for each continent). Previous tweets on 'harlem shake' was referencing the dancestyle and not the trend.</p>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="img/trends_2hs_03.png" alt="harlem shake graph" class="center" ;>
+    </div>
+
 </div>
 
 <div id="Gwiyomi Song" class="tabcontent">
