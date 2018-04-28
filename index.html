@@ -131,27 +131,81 @@
             margin-bottom: 5px;
         }
 
+        .backpanel{
+            position: fixed;
+            top: 53.6px;
+            left: 0;
+            padding-bottom: 100%;
+            padding-right: 20%;
+            width: 20px;
+        }
+
+        .backpanel:hover{
+            background-color: grey;
+
+        }
+        .backpanel:hover .back{
+            display: block;
+
+        }
+
+        .back{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left:8%;
+            color: white;
+            font-size:20px;
+        }
+
+        .nextpanel{
+            position: fixed;
+            top: 53.6px;
+            right: 0;
+            padding-bottom: 100%;
+            padding-right: 20%;
+            width: 20px;
+        }
+
+        .nextpanel:hover{
+            background-color: grey;
+
+        }
+
+        .nextpanel:hover .next{
+            display: block;
+        }
+
+        .next{
+            display: none;
+            position: fixed;
+            top: 50%;
+            right:8%;
+            color: white;
+            font-size: 20px;
+        }
+
     </style>
 </head>
 <body>
 
 <div class="navbar">
-    <a class="tablinks" onclick="openCity(event, 'Introduction')" id="defaultOpen">Introduction</a>
-    <a class="tablinks" onclick="openCity(event, 'Data')">Data</a>
-    <a class="tablinks" onclick="openCity(event, 'Analysis')">Analysis</a>
+    <a class="tablinks" id = "Introduction btn" onclick="openCity(event, 'Introduction')" >Introduction</a>
+    <a class="tablinks" id = "Data btn" onclick="openCity(event, 'Data')">Data</a>
+    <a class="tablinks" id = "Analysis btn" onclick="openCity(event, 'Analysis')">Analysis</a>
     <div class="dropdown tablinks">
         <button class="dropbtn" onclick="myFunction()">Trends &nbsp;
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-            <a class="tablinks trend" onclick="openCity(event, 'ICB')">Icebucket Challenge</a>
-            <a class="tablinks trend" onclick="openCity(event, 'HarlemShake')">Harlem Shake</a>
-            <a class="tablinks trend" onclick="openCity(event, 'Dress')">The Dress</a>
-            <a class="tablinks trend" onclick="openCity(event, 'Gwiyomi')">Gwiyomi Song</a>
-            <a class="tablinks trend" onclick="openCity(event, 'AoT')">Attack on Titan</a>
+            <a class="tablinks trend" id = "Icebucket Challenge btn" onclick="openCity(event, 'Icebucket Challenge')">Icebucket Challenge</a>
+            <a class="tablinks trend" id = "Harlem Shake btn" onclick="openCity(event, 'Harlem Shake')">Harlem Shake</a>
+            <a class="tablinks trend" id = "The Dress btn" onclick="openCity(event, 'The Dress')">The Dress</a>
+            <a class="tablinks trend" id = "Gwiyomi Song btn" onclick="openCity(event, 'Gwiyomi Song')">Gwiyomi Song</a>
+            <a class="tablinks trend" id = "Attack on Titan btn" onclick="openCity(event, 'Attack on Titan')">Attack on Titan</a>
         </div>
     </div>
-    <a class="tablinks" onclick="openCity(event, 'AboutUs')">About Us</a>
+    <a class="tablinks" id = "About Us btn" onclick="openCity(event, 'About Us')">About Us</a>
     <div class="navbar-header">
         <p class="navbar-brand"><i class="fa fa-heart"></i> &nbsp;We Love Poorthuis  &nbsp;<i class="fa fa-heart"></i></p>
     </div>
@@ -159,16 +213,21 @@
 
 
 <div id="Introduction" class="tabcontent">
+    <div class="nextpanel" onclick="openCity(event, 'Data')"> <a class="next">Next</a></div>
     <h2>Introduction</h2>
     <p>Introduction stuff</p>
 </div>
 
 <div id="Data" class="tabcontent">
+    <div class="backpanel" onclick="openCity(event, 'Introduction')"> <a class="back">Back</a></div>
+    <div class="nextpanel" onclick="openCity(event, 'Analysis')"> <a class="next">Next</a></div>
     <h2>Data</h2>
     <p>Data is the capital of France.</p>
 </div>
 
 <div id="Analysis" class="tabcontent">
+    <div class="backpanel" onclick="openCity(event, 'Data')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
     <h2>Analysis</h2>
         <h3>Categories and Comparison</h3>
         <hr>
@@ -203,7 +262,11 @@
 
 </div>
 
-<div id="ICB" class="tabcontent">
+<!-- Trends -->
+<!-- Trend 01: Ice Bucket Challenge -->
+<div id="Icebucket Challenge" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Analysis')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="next">Next</a></div>
 
     <div class="headers">
         <h2>Ice Bucket Challenge <badge class = "west-badge">Western</badge></h2>
@@ -215,7 +278,8 @@
     </div>
 
     <div class="txtbox">
-        <iframe src="https://oonyoontong.carto.com/builder/25ac0632-ae5f-4143-b5c7-6a1d261deb80/" height="600" width="820"></iframe>
+        <h5><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spread of "Ice Bucket Challenge" over time</b></h5>
+        <iframe width="100%" height="520" frameborder="0" src="https://oonyoontong.carto.com/builder/25ac0632-ae5f-4143-b5c7-6a1d261deb80/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
         <br /><br />
     </div>
 
@@ -231,27 +295,107 @@
 
 </div>
 
-<div id="HarlemShake" class="tabcontent">
-    <h2>HarlemShake</h2>
-    <p>Analysis is the capital of Japan.</p>
+<!-- Trend 02: Harlem Shake -->
+<div id="Harlem Shake" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'The Dress')"> <a class="next">Next</a></div>
+    <div class="headers">
+        <h2>Harlem Shake <badge class = "west-badge">Western</badge></h2>
+    </div>
+
+    <div class="txtbox">
+        <img src="img/trends_2hs_02.jpg" alt="harlem shake pic" height="250" style="float:left; padding-bottom: 20px; padding-right: 20px;">
+        <p>The Harlem Shake is a viral trend in a form of a video utilizing a song of the same name. The video starts off with a single participant dancing with onlookers pretending to be ignorant of his presence, after 15s the beat is dropped and the video cuts to a group of participants flailing around to the beat of the song.</p>
+
+        <p>The trend started on 30th Jan 2013 when Youtube Star ‘DizastaMusic’ uploaded a video featuring the meme. This video started a viral trend of people uploading their own version of the "Harlem Shake" to YouTube. The name harlem shake actually comes from a hip-hop dance style which the song is referencing, though the ‘dance’ in the trend is wildly different.
+        </p>
+    </div>
+
+    <div class="txtbox" style="margin-top:30px;">
+        <h5><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spread of "Harlem Shake" over time</b></h5>
+        <iframe width="100%" height="520" frameborder="0" src="https://oonyoontong.carto.com/builder/332c4bbe-0635-4bcb-92c4-e05fa4299610/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <br /><br />
+    </div>
+
+    <div class="txtbox">
+    <p>This trend became global shortly after it was first released. <b>It took only 9 days (30th Jan - 8th Feb) or 0.23 Months for this ‘Western’ trend to spread globally.</b></p>
+    <p>In the time vs longitude graph below. We can see the spread of the trend from when it was uploaded up till it hit "global status" (the curve in each of the blocks for each continent). Previous tweets on 'harlem shake' was referencing the dancestyle and not the trend.</p>
+    <p>The Harlem Shake was extremely viral and spread really quickly however, once the hype died down, it never resurfaced and was cast aside as a "dead meme". So even though it had a huge growth rate, it was not a recurring trend</p>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="img/trends_2hs_03.png" alt="harlem shake graph" class="center" ;>
+    </div>
 </div>
 
-<div id="Gwiyomi" class="tabcontent">
-    <h2>Gwiyomi <badge class = "west-badge">testing</badge></h2>
-    <p>Analysis is the capital of Japan.</p>
+<!-- Trend 03: The Dress -->
+<div id="The Dress" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="next">Next</a></div>
+    <div class="headers">
+        <h2>The Dress (blackandblue /whiteandgold) <badge class = "west-badge">Western</badge></h2>
+    </div>
+
+    <div class="txtbox">
+        <img src="img/trends_3dress_02.jpg" alt="dress pic" height="200" style="float:left; padding-bottom: 20px; padding-right: 20px;">
+        <p>"The dress" refers to an image of a dress posted on twitter when a user was showing off her shopping. It started trending when followers disagreed on whether the color of the dress was “blue and black” or “white and gold”. This became a trend overnight as constant retweets and arguments ensued over the social media platform and even was the subject of scientific debate on human color perception.</p>
+    </div>
+
+    <div class="txtbox" style="margin-top:50px;">
+        <h5 style="text-align: center;"><b>Spread of "The Dress" over time</b></h5>
+        <iframe width="100%" height="520" frameborder="0" src="https://oonyoontong.carto.com/builder/55112dd1-19c4-47aa-a9e1-fd4dd2b4cef2/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <br /><br />
+    </div>
+
+    <div class="txtbox">
+    <p>The trend became widespread on 26th Feb when the infamous picture of the dress was posted onto tumblr. Due to its bewildering properties and the illusion it played on people's mind, the picture trended on Twitter as well and was tweeted and retweeted by many the moment it was released, allowing it to hit 'global status' on the same day it was posted. The dress is our fastest growing trend, <b>hitting global reach in just under 6 hours</b></p>
+    <p>The post originated in New York, making it a western trend. It has a huge growth rate, hitting up to 5500 tweets a day within 2 days. However, it also has a large decay rate, dropping off the charts within the week.</p>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="img/trends_3dress_03.png" alt="dress graph" class="center" ;>
+    </div>
 </div>
 
-<div id="Dress" class="tabcontent">
-    <h2>Black&Blue / White&Gold Dress</h2>
-    <p>Analysis is the capital of Japan.</p>
+<!-- Trend 04: Gwiyomi -->
+<div id="Gwiyomi Song" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'The Dress')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onclick="openCity(event, 'Attack on Titan')"> <a class="next">Next</a></div>
+    <div class="headers">
+        <h2>Gwiyomi <badge class = "east-badge">Eastern</badge></h2>
+    </div>
+
+    <div class="txtbox">
+        <img src="img/trends_4gym_01.png" alt="gwiyomi pic" height="230" style="float:left; padding-bottom: 20px; padding-right: 20px;">
+        <p>The Gwiyomi Song (귀요미 송), is a song by Hari, a K-pop star from South Korean. The single was released on 18 Feb 2013 and was popularized by a local variety TV show. The meme was originally created by another K-pop star Jung Ilhoon in 2012, when he counted numbers in a “cute“ way on a reality TV show, to which Hari used as inspiration for her song. </p>
+        <p>The trend was spread as Hari’s fans recreated their own version of the chorus and uploaded it to social media. The trend was very popular in Asia, with most from South-east Asia. It was even reported to be popular in China (<a href="http://ent.china.com.cn/2013-04/01/content_28417422.htm">source</a>).</p>
+    </div>
+
+    <div class="txtbox" style="margin-top:50px;">
+        <h5 style="text-align: center;"><b>Spread of "Gwiyomi Song" over time</b></h5>
+        <iframe width="100%" height="520" frameborder="0" src="https://oonyoontong.carto.com/builder/387d97a9-c64e-4677-b04e-016482f90641/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <br /><br />
+    </div>
+
+    <div class="txtbox">
+    <p>As seen in the Time vs Longitude scatterplot above, the trend was already popular before Hari released her single and hit ‘global’ popularity in Apr 2013 with the surge in tweets. <b>This means that this ‘Eastern’ trend took 2 months to spread globally (or 4 months if counted from the original trend)</b>.</p>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="img/trends_4gym_02.png" alt="gwiyomi graph" class="center" ;>
+    </div>
 </div>
 
-<div id="AoT" class="tabcontent">
+<!-- Trend 05: Titans -->
+<div id="Attack on Titan" class="tabcontent">
+    <div class="backpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="back">Back</a></div>
+    <div class="nextpanel" onclick="openCity(event, 'About Us')"> <a class="next">Next</a></div>
+
     <h2>Attack on Titan</h2>
     <p>Analysis is the capital of Japan.</p>
 </div>
 
-<div id="AboutUs" class="tabcontent">
+<div id="About Us" class="tabcontent">
     <div class = "flex-container" style="padding: 40px 20px 20px 20px ">
         <div class = "flex-container" style="flex-direction: column;">
             <img src = "img/oontong.png" alt = "oontong-headshot" width =150 height=150/>
@@ -302,7 +446,8 @@
 
         document.getElementById(cityName).style.display = "block";
 
-        evt.currentTarget.className += " active";
+        document.getElementById(cityName+ " btn").className += " active";
+        console.log(document.getElementById(cityName+ " btn").className);
 
         if (evt.currentTarget.className.includes("trend")){
             console.log("TESTING");
@@ -313,10 +458,12 @@
 
             }
         }
+
+        window.scrollTo(0,0);
     }
 
     // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    document.getElementById("Introduction btn").click();
 </script>
 </body>
 </html>
