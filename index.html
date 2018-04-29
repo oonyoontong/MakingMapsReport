@@ -320,16 +320,20 @@
     <h2>Analysis</h2>
         <hr>
         <!-- Intro to Analysis -->
-        <h3>Categories and Comparison</h3>
-            <p>From the data as well as the CARTO graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
-            <ul>
-                <li>Recursive/Non-recursive</li>
-                <li>Growth Rate</li>
-                <li>Decay Rate</li>
-            </ul>
+            <p>From the data as well as the CARTO graphs, we discovered some interesting data amongst the trends. These can be summarised into the following:</p>
+            <ol>
+                <li>Catergories:
+                <ul>
+                    <li>Recursive/Non-recursive</li>
+                    <li>Growth Rate</li>
+                    <li>Decay Rate</li>
+                </ul></li>
+                <li>Influence</li>
+            </ol>
             <hr>
 
             <!-- Categories: Recursive -->
+            <h3>1) Categories</h3>
             <h4><i>Recursive/Non-recursive</i></h4>
             <img src="img/analysis1.png" class = "center" width="100%">
             <p>From the "Attack on Titan" trend, we noticed a pattern amongst the frequency of tweets surrounding it. The histogram above shows the number of tweets over time for the trend - the number of tweets fluctuates periodically, peaking every few days and dropping down afterwards. A closer analysis revealed that the ‘ebbs and flow’ of tweets correspond to the weekly release of new Attack on Titan episodes. Hence we can categorise "Attack on Titan" as a Recursive trend, with a period of 1 week.</p>
@@ -352,13 +356,13 @@
 
             <!-- Categories: Decay Rate -->
             <h4><i>Decay Rate</i></h4>
-            <p>Though western trends have a faster growth rate, they also have a greater decay rate than their eastern counterparts. For instance, Gwiyomi stayed around for 2 months, while the Dress disappeared as soon as it came, lasting only about a week.</p>
+            <p>Though western trends have a faster growth rate, they also have a greater decay rate than their eastern counterparts. For instance, "Gwiyomi Song" stayed around for 2 months, while "The Dress" disappeared as soon as it came, lasting only about a week. This can be seen from the graphs below, which shows the number of tweets per day over time.</p>
             <img src="img/analysis6.png" class = "center" width="100%">
         <br />
         <hr>
 
         <!-- Influence-->
-        <h3>Western vs Eastern</h3>
+        <h3>2) Influence</h3>
         <p>Let us review on the formula that we are using. We define the value as “Influence Factors”.</p>
         <div lang="latex">
         influence_{West\ to\ East}\dfrac{Eastern\ users\ retweet / Total\  eastern\ users}{Western\ users\ retweet / Total\  western\ users}
@@ -367,24 +371,38 @@
         <div lang="latex">
         influence_{East\ to\ West}\dfrac{Western\ users\ retweet / Total\  western\ users}{Eastern\ users\ retweet / Total\  eastern\ users}
         </div>
+
         <p>Although twitter is a predominantly western social media platform, as the influence factor equation makes use of ratio instead of absolute values, the ratio of twitter users participating is representative of the population’s participation in a trend.</p>
         <p>In our analysis, we count the number of tweets within one week after the trend breaks out. And the Influence Factors are plotted in the graph below.</p>
         <img src="img/analysis2-1.png" class = "center" width="60%">
+
         <p>This graph indicates that Western trends are 5-10 times more influential than the Eastern trends. To make the values understandable, we drew a cartogram where the area of the continents is proportional to the Influence Factors: </p>
+        <br />
+
         <img src="img/analysis2-2.png" class = "center" width="88%">
+
+        <br />
         <p>By the metrics mentioned above, the western countries are enlarged and the area of eastern countries shrink significantly. Do note that Africa is also enlarged because all western countries share the same Influence Factor based on our analysis. (Antarctica is not taken into our analysis and thus remains unchanged.)</p>
+       
         <p>However, if we look into the data and check the nationality of the twitter users, we will easily find out that the eastern trends are even less influential than we see above.</p>
+        <br />
+
         <div class="row">
         <div class="column"><img src="img/analysis2-3.png" class = "center" width="70%"></div>
         <div class="column"><img src="img/analysis2-4.png" class = "center" width="67%"></div>
         </div>
-        <p>Take Kwiyomi, an Eastern trend for an example. In the western countries, only 11% of the twitter users who tweets about Kwiyomi are really western people. The other 89% of the twitter users are actually eastern people who travel to western countries for reasons like study or work. Whereas for western trends in eastern countries, 99% of the people who talk about it are still eastern people. This reveals the fact that very few western people are influenced by eastern trends. And the eastern trends only propagate within the eastern group. Below is the corrected cartogram:</p>
+
+        <p>Take "Gwiyomi Song", an Eastern trend for an example. In the western countries, only 11% of the twitter users who tweets about "Gwiyomi Song" are really western people. The other 89% of the twitter users are actually eastern people who travel to western countries for reasons like study or work. Whereas for western trends in eastern countries, 99% of the people who talk about it are still eastern people. This reveals the fact that very few western people are influenced by eastern trends. And the eastern trends only propagate within the eastern group. Below is the corrected cartogram:</p>
+        
+        <br />
         <img src="img/analysis2-5.png" class = "center" width="88%">
-        <p>After the correction, eastern countries reduce to just one point. And the contrast between the western world and the eastern world is clearly seen. </p>
-        <p>With all the analysis done above, we now conclude that the western trends are more influential than the eastern trends. And from this conclusion, we can further infer that western countries are more culturally popular and powerful than the eastern cultures. </p>
-        <p>The next step would to be investigating on why there is a such difference. But, since the main purpose of this report is solely to define the existence of such a pattern, a comprehensive analysis on why and how it comes into being will not be needed.</p>
-        <p>Here, we consider three factors that might affect the popularity of a trend. The economy of the origin country, the population of the origin country and English proficiency of the origin country.</p>
+        <br />
+
+        <p>After the correction, eastern countries reduce to just one point, and the contrast between the western world and the eastern world is clearly seen. </p>
+        <p>With all the analysis done above, we now conclude that the <b>western trends are more influential than the eastern trends</b>. And from this conclusion, we can further infer that western countries are more culturally popular and powerful than the eastern cultures. </p>
+        <p>The next step would to be investigating on why there is a such difference. But, since the main purpose of this report is solely to define the existence of such a pattern, a comprehensive analysis on why and how it comes into being will not be needed. Here, we consider three factors that might affect the popularity of a trend. The economy of the origin country, the population of the origin country and English proficiency of the origin country.</p>
         <img src="img/analysis2-6.png" class = "center" width="100%">
+        <br />
         <p>It turns out that the pattern of the economy and population strays too much from the pattern of the Influential factor, but the pattern of the English proficiency conforms to the graph we previously have.</p>
         <p>This result is reasonable because English is a universal language, so any trend based on it will be easier to pass around the globe. However, in the eastern countries where trends are mostly based on local languages, it would be harder for the trends to penetrate the western world. </p>
 
