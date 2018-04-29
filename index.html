@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
     <meta charset="utf-8">
     <meta name="description" content="Making Maps I Project Report">
     <meta name="author" content="OonTong,LinWei,Justinian">
@@ -225,12 +226,18 @@
     <p>Data is the capital of France.</p>
 </div>
 
+
+
+
+
+
+
 <div id="Analysis" class="tabcontent">
     <div class="backpanel" onclick="openCity(event, 'Data')"> <a class="back">Back</a></div>
     <div class="nextpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
     <h2>Analysis</h2>
-        <h3>Categories and Comparison</h3>
         <hr>
+        <h3>Categories and Comparison</h3>
             <p>From the data as well as the carto graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
             <ul>
                 <li>Recursive/Non-recursive</li>
@@ -253,6 +260,26 @@
             <div class="column"><img src="img/analysis4.png" class = "center" width="100%"></div>
             <div class="column"><img src="img/analysis5.png" class = "center" width="100%"></div>
             </div>
+            <h4><i>Decay Rate</i></h4>
+            <p>Though western trends have a faster growth rate, they also have a greater decay rate than their eastern counterparts. For instance, Gwiyomi stayed around for 2 months, while the Dress disappeared as soon as it came, lasting only about a week.</p>
+            <div class="row">
+            <div class="column"><img src="img/analysis2.png" class = "center" width="100%"></div>
+            <div class="column"><img src="img/analysis3.png" class = "center" width="100%"></div>
+            </div>
+
+
+            
+        <hr>
+        <h3>Western vs Eastern</h3>
+        <p>Let us review on the formula that we are using. We define the value as “Influence Factors”.</p>
+        <div lang="latex">
+        influence_{West\ to\ East}\dfrac{Eastern\ users\ retweet / Total\  eastern\ users}{Western\ users\ retweet / Total\  western\ users}
+        </div>
+        <br>
+        <div lang="latex">
+        influence_{East\ to\ West}\dfrac{Western\ users\ retweet / Total\  western\ users}{Eastern\ users\ retweet / Total\  eastern\ users}
+        </div>
+
 
 
 
@@ -261,6 +288,10 @@
 
 
 </div>
+
+
+
+
 
 <!-- Trends -->
 <!-- Trend 01: Ice Bucket Challenge -->
