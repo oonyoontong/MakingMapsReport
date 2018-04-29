@@ -279,13 +279,14 @@
     <p>Data is the capital of France.</p>
 </div>
 
-<!-- Analysis -->
 
+<!-- Analysis -->
 <div id="Analysis" class="tabcontent">
     <div class="backpanel trend" onmouseup="openCity(event, 'Attack on Titan')"> <a class="back">Back</a></div>
     <div class="nextpanel" onmouseup="openCity(event, 'About Us')"> <a class="next">Next</a></div>
     <h2>Analysis</h2>
         <hr>
+        <!-- Intro to Analysis -->
         <h3>Categories and Comparison</h3>
             <p>From the data as well as the CARTO graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
             <ul>
@@ -293,26 +294,34 @@
                 <li>Growth Rate</li>
                 <li>Decay Rate</li>
             </ul>
+            <hr>
+
+            <!-- Categories: Recursive -->
             <h4><i>Recursive/Non-recursive</i></h4>
             <img src="img/analysis1.png" class = "center" width="100%">
             <p>Above is the histograms of the number of tweets over time, it shows the number of tweets fluctuating periodically. A closer analysis revealed that the ‘ebbs and flow’ of tweets correspond to the weekly release of new Attack on Titan episodes. </p>
             <img src="img/analysis2.png" class = "center" width="100%">
             <p>The graph above shows that both Eastern and Western twitter users are responsible for the periodicity of the tweets, although majority of the tweets for this trend come from eastern countries. </p>
             <p>There are also trends that are non-recursive such as the Harlem Shake which does not occur again after it hit its peak trend.</p>
-            
+            <hr>
+
+            <!-- Categories: Growth Rate -->
             <h4><i>Growth Rate</i></h4>
             <p>We discovered that western trends have a greater growth rate than eastern trends. This means that they take less time on conception to hit “global status”. For instance, in the Harlem Shake trend and the Dress challenge, both managed to hit global status in less than a week.</p>
             <div class="row">
             <div class="column"><img src="img/analysis4.png" class = "center" width="100%"></div>
             <div class="column"><img src="img/analysis5.png" class = "center" width="100%"></div>
             </div>
+            <hr>
+
+            <!-- Categories: Decay Rate -->
             <h4><i>Decay Rate</i></h4>
             <p>Though western trends have a faster growth rate, they also have a greater decay rate than their eastern counterparts. For instance, Gwiyomi stayed around for 2 months, while the Dress disappeared as soon as it came, lasting only about a week.</p>
             <img src="img/analysis6.png" class = "center" width="100%">
-
-
-            
+        <br />
         <hr>
+
+        <!-- Influence-->
         <h3>Western vs Eastern</h3>
         <p>Let us review on the formula that we are using. We define the value as “Influence Factors”.</p>
         <div lang="latex">
