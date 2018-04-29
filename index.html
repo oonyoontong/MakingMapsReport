@@ -189,7 +189,7 @@
     </style>
 </head>
 <body>
-
+<!-- Navigation Bar -->
 <div class="navbar">
     <a class="tablinks" id = "Introduction btn" onclick="openCity(event, 'Introduction')" >Introduction</a>
     <a class="tablinks" id = "Data btn" onclick="openCity(event, 'Data')">Data</a>
@@ -212,7 +212,7 @@
     </div>
 </div>
 
-
+<!-- Introduction -->
 <div id="Introduction" class="tabcontent">
     <div class="nextpanel" onclick="openCity(event, 'Data')"> <a class="next">Next</a></div>
     <h2>Introduction</h2>
@@ -226,12 +226,16 @@
     <p>Data is the capital of France.</p>
 </div>
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+<!-- Analysis -->
+>>>>>>> 4d014da8208fd0041260711eb38fd3d5d2b72d7e
 <div id="Analysis" class="tabcontent">
     <div class="backpanel" onclick="openCity(event, 'Data')"> <a class="back">Back</a></div>
     <div class="nextpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
@@ -351,7 +355,7 @@
     <div class="txtbox">
     <p>This trend became global shortly after it was first released. <b>It took only 9 days (30th Jan - 8th Feb) or 0.23 Months for this ‘Western’ trend to spread globally.</b></p>
     <p>In the time vs longitude graph below. We can see the spread of the trend from when it was uploaded up till it hit "global status" (the curve in each of the blocks for each continent). Previous tweets on 'harlem shake' was referencing the dancestyle and not the trend.</p>
-    <p>The Harlem Shake was extremely viral and spread really quickly however, once the hype died down, it never resurfaced and was cast aside as a "dead meme". So even though it had a huge growth rate, it was not a recurring trend</p>
+    <p>The Harlem Shake was extremely viral and spread really quickly however, once the hype died down, it never resurfaced and this western trend was cast aside as a "dead meme". So even though it had a huge growth rate, it was not a recurring trend</p>
     </div>
 
     <div class="imgcontainer">
@@ -409,7 +413,7 @@
     </div>
 
     <div class="txtbox">
-    <p>As seen in the Time vs Longitude scatterplot above, the trend was already popular before Hari released her single and hit ‘global’ popularity in Apr 2013 with the surge in tweets. <b>This means that this ‘Eastern’ trend took 2 months to spread globally (or 4 months if counted from the original trend)</b>.</p>
+    <p>As seen in the Time vs Longitude scatterplot above, the trend was already popular before Hari released her single and hit ‘global’ popularity in Apr 2013 with the surge in tweets. <b>This means that this ‘Eastern’ trend took 2 months to spread globally (or 4 months if counted from the original trend)</b>.</p> 
     </div>
 
     <div class="imgcontainer">
@@ -422,10 +426,34 @@
     <div class="backpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="back">Back</a></div>
     <div class="nextpanel" onclick="openCity(event, 'About Us')"> <a class="next">Next</a></div>
 
-    <h2>Attack on Titan</h2>
-    <p>Analysis is the capital of Japan.</p>
+    <div class="headers">
+        <h2>Attack on Titan <badge class = "east-badge">Eastern</badge></h2>
+    </div>
+
+    <div class="txtbox">
+        <img src="img/trends_5aot_01.png" alt="aot pic" height="200" style="float:left; padding-bottom: 20px; padding-right: 20px;">
+        <p>Attack on Titan (Japanese: 進撃の巨人 Shingeki no Kyojin) is an animated TV series adapting content from the first 8 volumes of Hajime Isayama's award-winning manga of the same name. The manga was well received in Japan and a TV anime series was announced in Dec 2012. The first episode aired on 7th April 2013, and became a hit amongst both the Japanese and international anime communities. </p>
+    </div>
+
+    <div class="txtbox" style="margin-top:50px;">
+        <h5 style="text-align: center;"><b>Spread of "Attack on Titan" over time</b></h5>
+        <iframe width="100%" height="520" frameborder="0" src="https://oonyoontong.carto.com/builder/df9c33de-3aa1-40bc-988c-c0994f3edb2a/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <br /><br />
+    </div>
+
+    <div class="txtbox">
+    <p>The release on the promotional video in Dec 2012, resulted in a surge in tweets from Japan and a handful from the rest of the world. After which, the hype mostly stayed in Japan until April when the first episode was released. From that point, tweets came from all over the world. <b>Thus, this ‘Eastern trend’, though popular, took over 4 months to spread globally.</b>.</p>
+    <p>As Attack on Titan is a TV series, new episodes air every week, and with it comes a new flurry of tweets about the show, thus we can catergorise this trend as a recurring trend.</p>
+    </div>
+
+    <div class="imgcontainer">
+        <img src="img/trends_5aot_02.png" alt="aot graph" class="center" ;>
+    </div>
 </div>
 
+
+
+<!-- About Us -->
 <div id="About Us" class="tabcontent">
     <div class = "flex-container" style="padding: 40px 20px 20px 20px ">
         <div class = "flex-container" style="flex-direction: column;">
