@@ -17,8 +17,8 @@
     <link rel="stylesheet" type="text/css" href="static/trends.css">
     <link rel="icon" href="https://hass.sutd.edu.sg/files/2016/08/xhass-faculty-ate-poorthuis-.jpg.pagespeed.ic.zXUx6Sd8w1.webp">
     <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
-        .w3-bar,h1 {font-family: "Montserrat", sans-serif}
+        body,h1,h2,h3,h4,h5,h6,h1 {font-family: "Open Sans", sans-serif}
+        .w3-bar {font-family: "Montserrat", sans-serif}
         .navbar {
             overflow: hidden;
             background-color: #333;
@@ -98,7 +98,7 @@
         }
 
         .navbar-brand{
-            float: right;
+            float: left;
             font-size: 20px;
             color: white;
             text-align: center;
@@ -137,7 +137,7 @@
             top: 53.6px;
             left: 0;
             padding-bottom: 100%;
-            padding-right: 20%;
+            padding-right: 18%;
             width: 20px;
         }
 
@@ -196,6 +196,10 @@
 <body>
 <!-- Navigation Bar -->
 <div class="navbar">
+    <div class="navbar-header">
+        <p class="navbar-brand"><i class="fa fa-heart"></i> &nbsp;We Love Poorthuis  &nbsp;<i class="fa fa-heart"></i></p>
+    </div>
+
     <a class="tablinks" id = "Introduction btn" onclick="openCity(event, 'Introduction')" >Introduction</a>
     <a class="tablinks" id = "Data btn" onmouseup="openCity(event, 'Data')">Data</a>
     <div class="dropdown tablinks">
@@ -212,16 +216,60 @@
     </div>
     <a class="tablinks" id = "Analysis btn" onmouseup="openCity(event, 'Analysis')">Analysis</a>
     <a class="tablinks" id = "About Us btn" onmouseup="openCity(event, 'About Us')">About Us</a>
-    <div class="navbar-header">
-        <p class="navbar-brand"><i class="fa fa-heart"></i> &nbsp;We Love Poorthuis  &nbsp;<i class="fa fa-heart"></i></p>
-    </div>
+    <a class="tablinks" id = "References btn" onmouseup="openCity(event, 'References')">References</a>
+
 </div>
 
 <!-- Introduction -->
 <div id="Introduction" class="tabcontent">
     <div class="nextpanel" onmouseup="openCity(event, 'Data')"> <a class="next">Next</a></div>
-    <h2>Introduction</h2>
-    <p>Introduction stuff</p>
+    <br/>
+    <h1>The Spread of Western and Eastern Viral Trends</h1>
+    <h6>02.221 Making Maps I: Introduction to Spatial Analysis, Data Visualization and Map Design</h6>
+    <hr>
+    <p>This is the final report to by We Love Poorthuis for the Making Maps course. Viral trends have steadily become an integral part of the globalised world. In this report, we want to see how much influence the western world has over the eastern world and vice versa. We will take a look at 5 different trends to study how they spread, and rationalize the factors that separate each of them.</p>
+    <br/>
+    <h2>Motivation</h2>
+    <hr>
+    <p>Data is the new gold. In recent times, we have began to see the truth of this statement. Viral trends and misinformation have allegedly been used to influence the outcome of the recent 2016 USA presidential elections. We believe that a better understanding of virality may help in combatting fake news and misinformation. </p>
+    <br/>
+    <h2>The hypothesis</h2>
+    <hr>
+    <h6>Viral trends that originate from the <b>west</b> have more <u>influence</u> than viral trends that originate from the <b>east</b>.</h6>
+    <b>Influence: The proportion of a region that participates in a viral trend that originated from the opposite region.</b>
+    <br/>
+    <br/>
+    <h2>Structure of the Report</h2>
+    <hr>
+    <ol>
+        <li>
+            <h5><b>Data</b></h5>
+            <p>What data we used and how we choose and cleaned the data for our use.</p>
+        </li>
+
+        <li>
+            <h5><b>Trends</b></h5>
+            <p>What data we used and how we choose and cleaned the data for our use.</p>
+        </li>
+
+        <li>
+            <h5><b>Analysis</b></h5>
+            <p>What data we used and how we choose and cleaned the data for our use.</p>
+        </li>
+
+        <li>
+            <h5><b>About Us</b></h5>
+            <p>What data we used and how we choose and cleaned the data for our use.</p>
+        </li>
+
+        <li>
+            <h5><b>References</b></h5>
+            <p>What data we used and how we choose and cleaned the data for our use.</p>
+        </li>
+
+
+
+    </ol>
 </div>
 
 <div id="Data" class="tabcontent">
@@ -242,7 +290,7 @@
     <h2>Analysis</h2>
         <hr>
         <h3>Categories and Comparison</h3>
-            <p>From the data as well as the carto graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
+            <p>From the data as well as the CARTO graphs, we discovered some interesting data amongst the trends. These can be summarised into 3 categories:</p>
             <ul>
                 <li>Recursive/Non-recursive</li>
                 <li>Growth Rate</li>
@@ -472,6 +520,11 @@
             <p>asdasd</p>
         </div>
     </div>
+</div>
+
+<div id = "References" class = tabcontent>
+    <br/>
+    <h2>References</h2>
 </div>
 
 <div class="footer">
