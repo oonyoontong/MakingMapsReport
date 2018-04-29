@@ -164,7 +164,7 @@
             top: 53.6px;
             right: 0;
             padding-bottom: 100%;
-            padding-right: 20%;
+            padding-right: 18%;
             width: 20px;
         }
 
@@ -186,27 +186,32 @@
             font-size: 20px;
         }
 
+        .footer{
+            height: 40px;
+            background-color: white;
+        }
+
     </style>
 </head>
 <body>
 <!-- Navigation Bar -->
 <div class="navbar">
     <a class="tablinks" id = "Introduction btn" onclick="openCity(event, 'Introduction')" >Introduction</a>
-    <a class="tablinks" id = "Data btn" onclick="openCity(event, 'Data')">Data</a>
-    <a class="tablinks" id = "Analysis btn" onclick="openCity(event, 'Analysis')">Analysis</a>
+    <a class="tablinks" id = "Data btn" onmouseup="openCity(event, 'Data')">Data</a>
     <div class="dropdown tablinks">
-        <button class="dropbtn" onclick="myFunction()">Trends &nbsp;
+        <button class="dropbtn" onmouseup="myFunction()">Trends &nbsp;
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-            <a class="tablinks trend" id = "Icebucket Challenge btn" onclick="openCity(event, 'Icebucket Challenge')">Icebucket Challenge</a>
-            <a class="tablinks trend" id = "Harlem Shake btn" onclick="openCity(event, 'Harlem Shake')">Harlem Shake</a>
-            <a class="tablinks trend" id = "The Dress btn" onclick="openCity(event, 'The Dress')">The Dress</a>
-            <a class="tablinks trend" id = "Gwiyomi Song btn" onclick="openCity(event, 'Gwiyomi Song')">Gwiyomi Song</a>
-            <a class="tablinks trend" id = "Attack on Titan btn" onclick="openCity(event, 'Attack on Titan')">Attack on Titan</a>
+            <a class="tablinks trend" id = "Icebucket Challenge btn" onmouseup="openCity(event, 'Icebucket Challenge')">Icebucket Challenge</a>
+            <a class="tablinks trend" id = "Harlem Shake btn" onmouseup="openCity(event, 'Harlem Shake')">Harlem Shake</a>
+            <a class="tablinks trend" id = "The Dress btn" onmouseup="openCity(event, 'The Dress')">The Dress</a>
+            <a class="tablinks trend" id = "Gwiyomi Song btn" onmouseup="openCity(event, 'Gwiyomi Song')">Gwiyomi Song</a>
+            <a class="tablinks trend" id = "Attack on Titan btn" onmouseup="openCity(event, 'Attack on Titan')">Attack on Titan</a>
         </div>
     </div>
-    <a class="tablinks" id = "About Us btn" onclick="openCity(event, 'About Us')">About Us</a>
+    <a class="tablinks" id = "Analysis btn" onmouseup="openCity(event, 'Analysis')">Analysis</a>
+    <a class="tablinks" id = "About Us btn" onmouseup="openCity(event, 'About Us')">About Us</a>
     <div class="navbar-header">
         <p class="navbar-brand"><i class="fa fa-heart"></i> &nbsp;We Love Poorthuis  &nbsp;<i class="fa fa-heart"></i></p>
     </div>
@@ -214,31 +219,26 @@
 
 <!-- Introduction -->
 <div id="Introduction" class="tabcontent">
-    <div class="nextpanel" onclick="openCity(event, 'Data')"> <a class="next">Next</a></div>
+    <div class="nextpanel" onmouseup="openCity(event, 'Data')"> <a class="next">Next</a></div>
     <h2>Introduction</h2>
     <p>Introduction stuff</p>
 </div>
 
 <div id="Data" class="tabcontent">
-    <div class="backpanel" onclick="openCity(event, 'Introduction')"> <a class="back">Back</a></div>
-    <div class="nextpanel" onclick="openCity(event, 'Analysis')"> <a class="next">Next</a></div>
+    <div class="backpanel" onmouseup="openCity(event, 'Introduction')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onmouseup="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
     <h2>Data</h2>
     <p>Data is the capital of France.</p>
 </div>
 
-<<<<<<< HEAD
 
 
 
-
-
-
-=======
 <!-- Analysis -->
->>>>>>> 4d014da8208fd0041260711eb38fd3d5d2b72d7e
+
 <div id="Analysis" class="tabcontent">
-    <div class="backpanel" onclick="openCity(event, 'Data')"> <a class="back">Back</a></div>
-    <div class="nextpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="next">Next</a></div>
+    <div class="backpanel trend" onmouseup="openCity(event, 'Attack on Titan')"> <a class="back">Back</a></div>
+    <div class="nextpanel" onmouseup="openCity(event, 'About Us')"> <a class="next">Next</a></div>
     <h2>Analysis</h2>
         <hr>
         <h3>Categories and Comparison</h3>
@@ -300,8 +300,8 @@
 <!-- Trends -->
 <!-- Trend 01: Ice Bucket Challenge -->
 <div id="Icebucket Challenge" class="tabcontent">
-    <div class="backpanel trend" onclick="openCity(event, 'Analysis')"> <a class="back">Back</a></div>
-    <div class="nextpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="next">Next</a></div>
+    <div class="backpanel" onmouseup="openCity(event, 'Data')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onmouseup="openCity(event, 'Harlem Shake')"> <a class="next">Next</a></div>
 
     <div class="headers">
         <h2>Ice Bucket Challenge <badge class = "west-badge">Western</badge></h2>
@@ -332,8 +332,8 @@
 
 <!-- Trend 02: Harlem Shake -->
 <div id="Harlem Shake" class="tabcontent">
-    <div class="backpanel trend" onclick="openCity(event, 'Icebucket Challenge')"> <a class="back">Back</a></div>
-    <div class="nextpanel trend" onclick="openCity(event, 'The Dress')"> <a class="next">Next</a></div>
+    <div class="backpanel trend" onmouseup="openCity(event, 'Icebucket Challenge')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onmouseup="openCity(event, 'The Dress')"> <a class="next">Next</a></div>
     <div class="headers">
         <h2>Harlem Shake <badge class = "west-badge">Western</badge></h2>
     </div>
@@ -365,8 +365,8 @@
 
 <!-- Trend 03: The Dress -->
 <div id="The Dress" class="tabcontent">
-    <div class="backpanel trend" onclick="openCity(event, 'Harlem Shake')"> <a class="back">Back</a></div>
-    <div class="nextpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="next">Next</a></div>
+    <div class="backpanel trend" onmouseup="openCity(event, 'Harlem Shake')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onmouseup="openCity(event, 'Gwiyomi Song')"> <a class="next">Next</a></div>
     <div class="headers">
         <h2>The Dress (blackandblue /whiteandgold) <badge class = "west-badge">Western</badge></h2>
     </div>
@@ -394,8 +394,8 @@
 
 <!-- Trend 04: Gwiyomi -->
 <div id="Gwiyomi Song" class="tabcontent">
-    <div class="backpanel trend" onclick="openCity(event, 'The Dress')"> <a class="back">Back</a></div>
-    <div class="nextpanel trend" onclick="openCity(event, 'Attack on Titan')"> <a class="next">Next</a></div>
+    <div class="backpanel trend" onmouseup="openCity(event, 'The Dress')"> <a class="back">Back</a></div>
+    <div class="nextpanel trend" onmouseup="openCity(event, 'Attack on Titan')"> <a class="next">Next</a></div>
     <div class="headers">
         <h2>Gwiyomi <badge class = "east-badge">Eastern</badge></h2>
     </div>
@@ -423,8 +423,8 @@
 
 <!-- Trend 05: Titans -->
 <div id="Attack on Titan" class="tabcontent">
-    <div class="backpanel trend" onclick="openCity(event, 'Gwiyomi Song')"> <a class="back">Back</a></div>
-    <div class="nextpanel" onclick="openCity(event, 'About Us')"> <a class="next">Next</a></div>
+    <div class="backpanel trend" onmouseup="openCity(event, 'Gwiyomi Song')"> <a class="back">Back</a></div>
+    <div class="nextpanel" onmouseup="openCity(event, 'Analysis')"> <a class="next">Next</a></div>
 
     <div class="headers">
         <h2>Attack on Titan <badge class = "east-badge">Eastern</badge></h2>
@@ -455,6 +455,7 @@
 
 <!-- About Us -->
 <div id="About Us" class="tabcontent">
+    <div class="backpanel trend" onmouseup="openCity(event, 'Attack on Titan')"> <a class="back">Back</a></div>
     <div class = "flex-container" style="padding: 40px 20px 20px 20px ">
         <div class = "flex-container" style="flex-direction: column;">
             <img src = "img/oontong.png" alt = "oontong-headshot" width =150 height=150/>
@@ -473,6 +474,9 @@
     </div>
 </div>
 
+<div class="footer">
+
+</div>
 <script>
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
@@ -481,7 +485,7 @@
     }
 
     // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
+    window.onmouseup = function(e) {
         if (!e.target.matches('.dropbtn')) {
             var myDropdown = document.getElementById("myDropdown");
             if (myDropdown.classList.contains('show')) {
